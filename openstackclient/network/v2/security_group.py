@@ -273,7 +273,7 @@ class ListSecurityGroup(common.NetworkAndComputeLister):
             filters['project_id'] = project_id
 
         _tag.get_tag_filtering_args(parsed_args, filters)
-        data = client.security_groups(fields=self.FIELDS_TO_RETRIEVE,
+        data = client.security_groups(fields=(),
                                       **filters)
 
         columns = (
